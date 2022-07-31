@@ -4,7 +4,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,1));
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8));
 }
 
 .App-logo {
@@ -45,6 +45,8 @@
 body {
   background-size: cover;
   background-repeat: no-repeat;
+  font-family: 'Oswald', sans-serif;
+  
 }
 
 .container {
@@ -52,12 +54,12 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  font-family: 'Oswald', sans-serif;
   margin-top: 15%;
 }
 
-.intro-text {             /*typed-out*/
-  margin-top: 10%;
+.intro-text {  
+  margin-bottom: 0.1%;
+  margin-top: 7%;
   overflow: hidden;
   border-right: 0.3rem solid orange;
   white-space: nowrap;
@@ -66,17 +68,25 @@ body {
   font-size: 4rem;
   width: 55%;
   animation: 
-    typing 1.4s steps(15, end) forwards,
-    blink 0.8s infinite;
+    typing 1.4s steps(20, end) forwards,
+    blink 1s infinite;
 
 }
 
 .name-input{
+  margin-bottom: 2.5%;
+  padding: 0 1% 1%;
+  text-align: center;
+  font-size: 3.2rem;
+  size: 50px;
+  color: white;
   width: 25%;
   border: none;
   background-color: inherit;
   border-bottom: 0.3rem solid white;
   padding-top: 3%;
+  size: 50px;
+  
 }
 
 @keyframes typing {
@@ -92,3 +102,42 @@ body {
 .name-input:focus {
   outline: none;
 }
+
+.btn {
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: white;
+  color: black;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  font-weight: 550;
+  border-radius: 60px;
+  position: relative;
+
+  --border-size: 3px;
+}
+
+.btn.btn-border-pop::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  border: 2px solid white;
+  border-radius: 60px;
+  transition: top, left, right, bottom, 100ms ease-in-out;
+}
+
+.btn.btn-border-pop:hover::before{
+  top: calc(var(--border-size) * -2);
+  left: calc(var(--border-size) * -2);
+  right: calc(var(--border-size) * -2);
+  bottom: calc(var(--border-size) * -2);
+}
+
+a {
+  cursor: pointer;
+}
+
