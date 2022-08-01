@@ -1,5 +1,7 @@
-import logo from './logo.svg';
 import './App.css';
+import Info from './Info';
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import Home from './Home';
 
 function App() {
   let bg = document.querySelector("body");
@@ -19,17 +21,13 @@ function App() {
   
 
   return (
-    <div className="App">
-    <div className="container">
-      <p className='intro-text'>Hey there! What do I call you?</p>
-      <input className='name-input' type="text" spellCheck="false"/>
-      <a href='https://www.google.co.in/'>
-        <button className='btn btn-border-pop'>Get Started</button>
-      </a>
-      
+    <div className='App'>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/info" element={<Info />} />
+      </Routes>
     </div>
-    </div>
-      
+
   );
 }
 
