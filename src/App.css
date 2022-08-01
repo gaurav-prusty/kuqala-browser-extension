@@ -4,7 +4,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,1));
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7));
 }
 
 .App-logo {
@@ -113,6 +113,7 @@ body {
   font-weight: 550;
   border-radius: 60px;
   position: relative;
+  border: none;
 
   --border-size: 3px;
 }
@@ -127,7 +128,7 @@ body {
   z-index: -1;
   border: 2px solid white;
   border-radius: 60px;
-  transition: top, left, right, bottom, 100ms ease-in-out;
+  transition: top, left, right, bottom, 120ms ease-in-out;
 }
 
 .btn.btn-border-pop:hover::before{
@@ -306,7 +307,7 @@ a {
 
 .content {
   position: absolute;
-  top: 15rem;
+  top: 12rem;
   bottom: 10rem;
   right: 0rem;
   left: 0rem;
@@ -321,7 +322,7 @@ a {
 }
 
 .time {
-  font-size: 8rem;
+  font-size: 10rem;
 }
 
 .focus-input {
