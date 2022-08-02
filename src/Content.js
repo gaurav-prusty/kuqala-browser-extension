@@ -1,19 +1,54 @@
-import React from 'react';
+import React, { useState, useEffect, useContext } from 'react';
+import { UserContext } from './UserContext';
 
 function Content() {
+    let [time, setTime] = useState("");
+    var greeting = "";
+    const date = new Date();
+
+    //useContext from UserContext.js
+    const {userName, setUserName} = useContext(UserContext);
+
+    //to convert username to title case
+    function titleCase(str) {
+        var splitStr = str.toLowerCase().split(' ');
+        for (var i = 0; i < splitStr.length; i++) {
+            splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);     
+        }
+        return splitStr.join(' '); 
+     }
+    
+    //dynamically set time
+    useEffect(()=> {
+        setInterval(()=> {
+            const Time = new Date();
+            setTime(Time.toTimeString().slice(0,5));
+        }, 1000); 
+    }, []);
+
+
+    //set greeting wrt time
+    if (date.getHours() >= 0 && date.getHours() < 12) {
+        greeting = "Good Morning, ";
+    } else if (date.getHours() >= 12 && date.getHours() <= 16) {
+        greeting = "Good Afternoon, ";
+    } else if (date.getHours() > 16) {
+        greeting = "Good Evening, ";
+    }
+
     return (
         <div className='content'>
             <div className='time flex-child'>
-                88:88
+                {time}
             </div>
             <div className='greeting flex-child'>
-                Good Afternoon, Gaurav!
+                {greeting} {titleCase(userName)}!
             </div>
             <div className='user-message flex-child'>
                 What's your main focus for today?
             </div>
             <div className='focus flex-child'>
-                <input className='focus-input'></input>
+                <input className='focus-input' spellCheck='false' autoComplete='false'></input>
             </div>
         </div>
     );
