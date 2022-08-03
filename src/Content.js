@@ -1,19 +1,29 @@
-import React, { useState, useEffect, useContext } from 'react';
-import { UserContext } from './UserContext';
+import React, { useState, useEffect} from 'react';
 
 function Content() {
     let [time, setTime] = useState("");
     var greeting = "";
     const date = new Date();
+    const localStorageData = window.localStorage.getItem("userName");
 
-    //useContext from UserContext.js
-    const {userName, setUserName} = useContext(UserContext);
+    console.log(localStorageData);
+    console.log("is local storage null");
+    localStorageData && console.log("hey its here!");
+
+
+
+
+
+
 
     //to convert username to title case
     function titleCase(str) {
-        var splitStr = str.toLowerCase().split(' ');
+        var splitStr = str?.toLowerCase().split(" ");
+
+        console.log(splitStr);
         for (var i = 0; i < splitStr.length; i++) {
-            splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);     
+            splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);  
+ 
         }
         return splitStr.join(' '); 
      }
@@ -25,7 +35,6 @@ function Content() {
             setTime(Time.toTimeString().slice(0,5));
         }, 1000); 
     }, []);
-
 
     //set greeting wrt time
     if (date.getHours() >= 0 && date.getHours() < 12) {
@@ -42,7 +51,9 @@ function Content() {
                 {time}
             </div>
             <div className='greeting flex-child'>
-                {greeting} {titleCase(userName)}!
+                {greeting} {titleCase(JSON.parse(localStorage.getItem("userName")))}!
+            
+                {/*  */}
             </div>
             <div className='user-message flex-child'>
                 What's your main focus for today?

@@ -14,6 +14,7 @@ function Topright() {
     let [cityName, setCityName] = React.useState("");
     
     let weatherIconUrl = `http://openweathermap.org/img/wn/${icon}@2x.png`;
+    let testWeatherIconUrl = `http://openweathermap.org/img/wn/10d@2x.png`;
     
     //initialise geolocation API
     navigator.geolocation.getCurrentPosition(success, failure);
@@ -31,24 +32,25 @@ function Topright() {
         cityNameUrl = `http://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&appid=${apiID}`;
             
         //temp and weather icon fetch
-        fetch(weatherUrl)
-            .then(res=> res.json())
-            .then(jsonData=> {
-                setTemp(parseFloat(jsonData.main.temp).toFixed(1));
-                setIcon(jsonData.weather[0].icon);
-            });
+        // fetch(weatherUrl)
+        //     .then(res=> res.json())
+        //     .then(jsonData=> {
+        //         setTemp(parseFloat(jsonData.main.temp).toFixed(1));
+        //         setIcon(jsonData.weather[0].icon);
+        //     });
 
-        //location in text fetch
-        fetch(cityNameUrl)
-            .then(res=> res.json())
-            .then(jsonData => {
-                setCityName(jsonData[0].local_names.en + ", " + jsonData[0].country);
-            }); 
+        // //location in text fetch
+        // fetch(cityNameUrl)
+        //     .then(res=> res.json())
+        //     .then(jsonData => {
+        //         setCityName(jsonData[0].local_names.en + ", " + jsonData[0].country);
+        //     }); 
     }
 
     return (  
         <div className='top-right'>
-            <img className='weather-icon' src={weatherIconUrl} ></img>
+            {/* <img className='weather-icon' src={weatherIconUrl} ></img> */}
+            <img className='weather-icon' src={testWeatherIconUrl} ></img>
             <p className='weather-info temp'>{temp}&#176;</p>
             <p className='weather-info loc'>{cityName}</p>
         </div>
