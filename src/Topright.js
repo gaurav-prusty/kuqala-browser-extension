@@ -30,25 +30,25 @@ function Topright() {
         weatherUrl = `https://api.openweathermap.org/data/2.5/weather?units=metric&lat=${lat}&lon=${lon}&appid=${apiID}`;
         cityNameUrl = `http://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&appid=${apiID}`;
             
-        //temp and weather icon fetch
-        fetch(weatherUrl)
-            .then(res=> res.json())
-            .then(jsonData=> {
-                setTemp(parseFloat(jsonData.main.temp).toFixed(1));
-                setIcon(jsonData.weather[0].icon);
-            });
+        // //temp and weather icon fetch
+        // fetch(weatherUrl)
+        //     .then(res=> res.json())
+        //     .then(jsonData=> {
+        //         setTemp(parseFloat(jsonData.main.temp).toFixed(1));
+        //         setIcon(jsonData.weather[0].icon);
+        //     });
 
-        //location in text fetch
-        fetch(cityNameUrl)
-            .then(res=> res.json())
-            .then(jsonData => {
-                setCityName(jsonData[0].local_names.en + ", " + jsonData[0].country);
-            }); 
+        // //location in text fetch
+        // fetch(cityNameUrl)
+        //     .then(res=> res.json())
+        //     .then(jsonData => {
+        //         setCityName(jsonData[0].local_names.en + ", " + jsonData[0].country);
+        //     }); 
     }
 
     return (  
         <div className='top-right'>
-            <img className='weather-icon' src={weatherIconUrl} ></img>
+            {/* <img className='weather-icon' src={weatherIconUrl} ></img> */}
             <p className='weather-info temp'>{temp}&#176;</p>
             <p className='weather-info loc'>{cityName}</p>
         </div>

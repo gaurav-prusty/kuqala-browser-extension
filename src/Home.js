@@ -1,20 +1,26 @@
-import React, { useContext } from 'react';
-import {Link} from "react-router-dom";
-import { UserContext } from './UserContext';
+import React, {useState} from 'react';
+import {useNavigate} from "react-router-dom";
 
 
 function Home() {
 
-    let {userName, setUserName} = useContext(UserContext);
+    let [userName, setUserName] = useState();
 
-    
+    const navigate = useNavigate();
+
+    function changeHandler(event) {
+        setUserName(event.target.value)
+    }
+
+    function goInfo() {
+        navigate("/info");
+    }
+
     return (
         <div className="container">
             <p className='intro-text'>Hey there! What do I call you?</p>
-            <input onChange={event=> setUserName(event.target.value)} className='name-input' type="text" spellCheck="false"/>
-            <Link to="/info"> 
-                <button className='btn btn-border-pop'>Get Started</button>
-            </Link>
+            <input onChange={changeHandler} className='name-input' type="text" spellCheck="false"/>
+            <button onClick={goInfo} className='btn btn-border-pop' style={{display: userName ? "block" : "none"}}>Get Started</button>
         </div>
     );
 }

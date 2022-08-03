@@ -1,13 +1,9 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { UserContext } from './UserContext';
 
 function Content() {
     let [time, setTime] = useState("");
     var greeting = "";
     const date = new Date();
-
-    //useContext from UserContext.js
-    const {userName, setUserName} = useContext(UserContext);
 
     //to convert username to title case
     function titleCase(str) {
@@ -42,7 +38,7 @@ function Content() {
                 {time}
             </div>
             <div className='greeting flex-child'>
-                {greeting} {titleCase(userName)}!
+                {greeting} name!
             </div>
             <div className='user-message flex-child'>
                 What's your main focus for today?
