@@ -1,11 +1,11 @@
 import './App.css';
 import Info from './Info';
-import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import {Routes, Route, Navigate} from "react-router-dom";
 import Home from './Home';
+import React, { useEffect, useState } from 'react';
 
 
 function App() {
-
 
   return (
     <div className='App'>

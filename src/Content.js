@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect } from 'react';
 
 function Content() {
     let [time, setTime] = useState("");
@@ -38,7 +38,7 @@ function Content() {
                 {time}
             </div>
             <div className='greeting flex-child'>
-                {greeting} name!
+                {greeting} {titleCase(window.localStorage.getItem("userName"))}
             </div>
             <div className='user-message flex-child'>
                 What's your main focus for today?
