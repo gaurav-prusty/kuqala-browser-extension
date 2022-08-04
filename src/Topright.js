@@ -36,21 +36,21 @@ function Topright() {
         cityNameUrl = `http://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&appid=${apiID}`;
 
         //weather data fetch from API
-        axios.get(weatherUrl)
-            .then(res=> {
-                setTemp(parseFloat(res.data.main.temp).toFixed(0));
-                setIcon(res.data.weather[0].icon);              //change: 1--> 0 if no image rendered.
-            })
+    //     axios.get(weatherUrl)
+    //         .then(res=> {
+    //             setTemp(parseFloat(res.data.main.temp).toFixed(0));
+    //             setIcon(res.data.weather[0].icon);              //change: 1--> 0 if no image rendered.
+    //         })
 
-        axios.get(cityNameUrl)
-            .then(res=> {
-                setCityName(res.data[0].name + ", " + res.data[0].country);
-            })
-    }
+    //     axios.get(cityNameUrl)
+    //         .then(res=> {
+    //             setCityName(res.data[0].name + ", " + res.data[0].country);
+    //         })
+     }
 
     return (  
         <div className='top-right'>
-            <img className='weather-icon' src={weatherIconUrl} ></img>
+            {/* <img className='weather-icon' src={weatherIconUrl} ></img> */}
             <p className='weather-info temp'>{temp}&#176;</p>
             <p className='weather-info loc'>{cityName}</p>
         </div>

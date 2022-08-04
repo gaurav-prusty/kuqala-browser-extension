@@ -354,6 +354,60 @@ a {
   outline: none !important;
 }
 
+.focus-box {
+  margin-top: 2rem;
+}
+
+.focus-box-title {
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.focus-box-item {
+  font-size: 2rem;
+  margin-top: 1rem;
+  display: flex;
+  flex-flow: row;
+  gap: 0.7rem;
+}
+
+.focus-item-checkbox {
+  margin-top: 0.45rem;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  cursor: pointer;
+  height: 1.5rem;
+  width: 1.5rem;
+  place-content: center;
+}
+
+.focus-edit {
+  cursor: pointer;
+  border-radius: 50%;
+  margin-left: 1rem;
+  width: 2.3rem;
+  transition: 120ms ease-in-out;
+}
+
+.focus-edit:hover {
+  background-color: grey;
+}
+
+.bi-pencil-square {
+  margin-left: 0.4rem;
+  margin-top: 0.4rem;
+}
+
+
+
+
+
+
+
+
+
 
 
 
