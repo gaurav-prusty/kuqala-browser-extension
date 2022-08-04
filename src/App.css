@@ -4,7 +4,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,1));
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,1)), url("https://picsum.photos/1680/937");
 }
 
 .App-logo {
@@ -250,6 +250,7 @@ a {
 
 
 .bottom-left {
+  cursor: pointer;
   color: white;
   display: grid;
   grid-template-columns: 3rem 6rem;
@@ -352,6 +353,60 @@ a {
 .focus-input:focus {
   outline: none !important;
 }
+
+.focus-box {
+  margin-top: 2rem;
+}
+
+.focus-box-title {
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.focus-box-item {
+  font-size: 2rem;
+  margin-top: 1rem;
+  display: flex;
+  flex-flow: row;
+  gap: 0.7rem;
+}
+
+.focus-item-checkbox {
+  margin-top: 0.45rem;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  cursor: pointer;
+  height: 1.5rem;
+  width: 1.5rem;
+  place-content: center;
+}
+
+.focus-edit {
+  cursor: pointer;
+  border-radius: 50%;
+  margin-left: 1rem;
+  width: 2.3rem;
+  transition: 120ms ease-in-out;
+}
+
+.focus-edit:hover {
+  background-color: grey;
+}
+
+.bi-pencil-square {
+  margin-left: 0.4rem;
+  margin-top: 0.4rem;
+}
+
+
+
+
+
+
+
+
 
 
 

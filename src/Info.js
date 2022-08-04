@@ -1,5 +1,4 @@
 import React from 'react';
-import {Link} from "react-router-dom";
 import Bottomleft from './Bottomleft';
 import Bottomright from './Bottomright';
 import Content from './Content';
