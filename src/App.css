@@ -234,7 +234,7 @@ a {
 .loc {
   grid-column: 1/4;
   position: relative;
-  left: 9rem;
+  left: 8rem;
 }
 
 .temp {
@@ -293,6 +293,7 @@ a {
 }
 
 .bottom-right {
+  cursor: pointer;
   padding: 0rem;
   color: black;
   position: absolute;

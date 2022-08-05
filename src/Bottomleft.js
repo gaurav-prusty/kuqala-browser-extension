@@ -4,6 +4,8 @@ import {useNavigate} from "react-router-dom"
 function Bottomleft() {
 
     const navigate = useNavigate();
+
+    //navigate to home page
     function goHome() {
         navigate("/");
         window.localStorage.removeItem("userName");
@@ -19,9 +21,7 @@ function Bottomleft() {
                     <p>Log Out</p>  
                 </div> 
             </div>
-        </div>
-        
-    );
-}
+        </div> 
+)}
 
 export default Bottomleft;

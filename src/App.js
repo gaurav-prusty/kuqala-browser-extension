@@ -14,16 +14,11 @@ function App() {
     <div className='App'>
     <ListContext.Provider value={{items, setItems}}>
       <Routes>
-      
         <Route path="/" element={<Home />} />
         <Route path="/info" element={<Info />} />
-        
       </Routes>
       </ListContext.Provider>
-
   </div>
-
-  );
-}
+)}
 
 export default App;

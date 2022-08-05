@@ -17,7 +17,6 @@ function Topleft() {
                 </button>
             </div>
         </div>
-    );
-}
+)}
 
 export default Topleft;

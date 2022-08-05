@@ -4,15 +4,9 @@ import {useNavigate} from "react-router-dom";
 
 function Home() {
 
-    let [userName, setUserName] = useState();
+    let [userName, setUserName] = useState();               //store username entered by user
 
     const navigate = useNavigate();
-
-    function changeHandler(event) {
-        setUserName(event.target.value)
-        
-    }
-
 
     function goInfo() {
         navigate("/info");
@@ -22,10 +16,9 @@ function Home() {
     return (
         <div className="container">
             <p className='intro-text'>Hey there! What do I call you?</p>
-            <input onChange={changeHandler} className='name-input' type="text" spellCheck="false"/>
+            <input onChange={(event)=> setUserName(event.target.value)} className='name-input' type="text" spellCheck="false"/>
             <button onClick={goInfo} className='btn btn-border-pop' style={{display: userName ? "block" : "none"}}>Get Started</button>
         </div>
-    );
-}
+)}
 
 export default Home;  
