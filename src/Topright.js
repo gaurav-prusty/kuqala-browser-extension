@@ -48,7 +48,7 @@ function Topright() {
 
     return (  
         <div className='top-right'>
-            <img className='weather-icon' src={weatherIconUrl} ></img>
+            <img className='weather-icon' src={weatherIconUrl} alt="weather-icon"></img>
             <p className='weather-info temp'>{temp}&#176;</p>
             <p className='weather-info loc'>{cityName}</p>
         </div>
