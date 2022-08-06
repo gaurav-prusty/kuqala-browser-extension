@@ -1,29 +1,24 @@
 import './App.css';
 import Info from './Info';
-import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import {Routes, Route} from "react-router-dom";
 import Home from './Home';
-import { UserContext } from './UserContext';
-import { useState } from 'react';
+import React, { useState } from 'react';
+import { ListContext } from './ListContext';
 
 
 function App() {
 
-
-
-  let [userName, setUserName] = useState(null);
+  let [items, setItems] = useState([]);
 
   return (
     <div className='App'>
-      <UserContext.Provider value={{userName, setUserName}}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/info" element={<Info />} />
-        </Routes>
-      </UserContext.Provider>
-
-    </div>
-
-  );
-}
+    <ListContext.Provider value={{items, setItems}}>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/info" element={<Info />} />
+      </Routes>
+      </ListContext.Provider>
+  </div>
+)}
 
 export default App;

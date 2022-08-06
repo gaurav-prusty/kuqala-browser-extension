@@ -1,10 +1,11 @@
 .App {
+  user-select: none;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,1));
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,1)), url("https://picsum.photos/1680/937");
 }
 
 .App-logo {
@@ -232,6 +233,8 @@ a {
 
 .loc {
   grid-column: 1/4;
+  position: relative;
+  left: 8rem;
 }
 
 .temp {
@@ -250,6 +253,7 @@ a {
 
 
 .bottom-left {
+  cursor: pointer;
   color: white;
   display: grid;
   grid-template-columns: 3rem 6rem;
@@ -289,6 +293,7 @@ a {
 }
 
 .bottom-right {
+  cursor: pointer;
   padding: 0rem;
   color: black;
   position: absolute;
@@ -352,6 +357,216 @@ a {
 .focus-input:focus {
   outline: none !important;
 }
+
+.focus-box {
+  margin-top: 2rem;
+}
+
+.focus-box-title {
+  font-weight: bold;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.focus-box-item {
+  cursor: default;
+  font-size: 2rem;
+  margin-top: 1rem;
+  display: flex;
+  flex-flow: row;
+  gap: 0.7rem;
+}
+
+.checkbox {
+  margin-top: 0.45rem;
+  border: 1px solid white;
+  color: white;
+  cursor: default;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.focus-edit {
+  cursor: pointer;
+  border-radius: 50%;
+  margin-left: 1rem;
+  width: 2.3rem;
+  transition: 120ms ease-in-out;
+}
+
+.focus-edit:hover {
+  background-color: grey;
+}
+
+.bi-pencil-square {
+  margin-left: 0.4rem;
+  margin-top: 0.4rem;
+}
+
+.todo-list {
+  position: absolute;
+  right: 3rem;
+  bottom: 4.7rem;
+  height: auto;
+  width: auto;
+  background-color: #323333;
+  padding: 0rem 2rem 1rem 0rem;
+}
+
+.todo-list-title {
+  position: relative;
+  left: 1.5rem;
+  top: -1rem;
+  display: inline-block;
+  font-weight: 400;
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+
+.todo-list-minus {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  top: -0.7rem;
+  left: 11.5rem;
+  width: 2rem;
+  border-radius: 50%;
+  transition: 120ms ease-in-out;
+}
+
+.todo-list-minus:hover {
+  border: 4px solid grey;
+}
+
+.todo-list-item {
+  display: flex;
+  gap: 1rem;
+  position: relative;
+  left: 1rem;
+  margin-bottom: 0.4rem;
+  margin-top: 0rem;
+}
+
+.todo-checkbox {
+  position: relative;
+  top: 0.4rem;  
+}
+
+.todo-remove-div {
+  position: absolute;
+  right: 0.5rem;
+  top: 0.6rem;
+  border-radius: 50%;
+  transition: 120ms ease-in-out;
+}
+
+.todo-remove-div:hover {
+  background-color: gray;
+}
+
+.todo-remove {
+  position: relative;
+  top: 0.1rem;
+  right: 0.04rem;
+}
+
+.list-item {
+  width: auto;
+  height: auto;
+  word-wrap: break-word;
+}
+
+
+
+
+
+
+
+
+
+
+
+.add-item {
+  display: flex;
+  flex-flow: row;
+}
+
+.add-item-input {
+  font-size: 1rem;
+  position: relative;
+  left: 1.5rem;
+  width: 15rem;
+  color: white;
+  outline: none;
+  border: none;
+  background-color: inherit;
+}
+
+.add-item-input::placeholder {
+  color: whitesmoke;
+  font-size: 0.8;
+}
+
+.add-btn {
+  
+  position: relative;
+  left: 1.2rem;
+  padding: 0.3rem 0.4rem;
+  border-radius: 60px;
+  
+  transition: 120ms ease-in-out;
+  
+
+}
+
+.add-btn:hover {
+  background-color: rgb(187, 187, 187);
+}
+
+.add-btn:focus {
+  outline: none !important;
+}
+
+/* .todo-list-item {
+  display: flex;
+  flex-flow: row;
+  position: relative;
+  left: 1rem;
+  font-style: italic;
+  width: 18rem;
+  height: 2.8rem;
+  margin-bottom: 20px;
+}
+
+.todo-checkbox {
+  position: relative;
+  top: 0.2rem;
+  left: 0.5rem;
+}
+
+.list-item {
+  position: relative;
+  left: 1.5rem;
+  display: block;
+}
+
+.todo-remove {
+  position: relative;
+  left: 0.05rem;
+  top: 0.1rem;
+}
+
+.todo-remove-div {
+  position: relative;
+  right: -13rem;
+  top: 0.45rem;
+} */
+
+
+
+
+
+
 
 
 
