@@ -8,7 +8,7 @@ function Topleft() {
             </div>
             <div className='search-field'>
                 <form action='https://www.google.com/search' method='get' target='blank'>
-                    <input className='search-field-input' placeholder='Google Search' spellCheck="false" name='q' autoComplete='false'></input>
+                    <input className='search-field-input' placeholder='Google Search' spellCheck="false" name='q' autoComplete='off'></input>
                 </form>  
             </div>
             <div className='search-cross'>
@@ -17,7 +17,6 @@ function Topleft() {
                 </button>
             </div>
         </div>
-    );
-}
+)}
 
 export default Topleft;
