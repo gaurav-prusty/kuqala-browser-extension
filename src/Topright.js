@@ -27,10 +27,10 @@ function Topright() {
     //-->success code; latitude and longitude fetch
     function success(pos) {
         //Bangalore lat-lon; uncomment :32,33 for live weather data 
-        lat = 12.9716;
-        lon = 77.5946;
-        //lat = pos.coords.latitude;
-        //lon = pos.coords.longitude;
+        //lat = 12.9716;
+        //lon = 77.5946;
+        lat = pos.coords.latitude;
+        lon = pos.coords.longitude;
 
         weatherUrl = `https://api.openweathermap.org/data/2.5/weather?units=metric&lat=${lat}&lon=${lon}&appid=${apiID}`;
         cityNameUrl = `http://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&appid=${apiID}`;
