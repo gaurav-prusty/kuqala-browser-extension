@@ -3,9 +3,9 @@ Kuqala Extension is an interactive new tab page that helps you organize your dai
 
 ## FEATURES
 
-  Markup : * Detects a user's current location and updates weather accordingly.
-  Markup : * Displays current time, city, temperature, and weather in sync
-  Markup : * User can add a main focus for the day and lets the user edit the current item to a new item upon completion.
-  Markup : * User can add ToDo activities for the day, letting the user delete/strike items on completion.
-  Markup : * Users can access google search with the default search bar
-  Markup : * Fresh wallpaper on every refresh
+* Detects a user's current location and updates weather accordingly.
+* Displays current time, city, temperature, and weather in sync
+* User can add a main focus for the day and lets the user edit the current item to a new item upon completion.
+* User can add ToDo activities for the day, letting the user delete/strike items on completion.
+* Users can access google search with the default search bar
+* Fresh wallpaper on every refresh
