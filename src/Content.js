@@ -12,11 +12,13 @@ function Content() {
 
     //to convert username to title case
     function titleCase(str) {
-        var splitStr = str.toLowerCase().split(' ');
+        if (str != null){
+            var splitStr = str.toLowerCase().split(' ');
         for (var i = 0; i < splitStr.length; i++) {
             splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);     
         }
         return splitStr.join(' '); 
+        }  
      }
     
     //dynamically set time
@@ -53,7 +55,8 @@ function Content() {
                 {time}
             </div>
             <div className='greeting flex-child'>
-                {greeting} {titleCase(window.localStorage.getItem("userName"))}
+                {greeting} 
+                {titleCase(window.localStorage.getItem("userName"))}
             </div>
             <div className='user-message flex-child'>
                 What's your main focus for today?

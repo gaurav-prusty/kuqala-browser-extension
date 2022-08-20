@@ -7,7 +7,7 @@ function Bottomright() {
     let {items} = useContext(ListContext);              //array to store todo list items
 
     let [showList, setShowList] = useState(false);      //state to toggle appearance of list
-    let [listItem, setListItem] = useState("");         //state to intermediary storage todo list item 
+    let [listItem, setListItem] = useState("");         //state to intermediary storage of single todo list item 
 
     //add item to todo list
     function addItem() {
@@ -22,8 +22,8 @@ function Bottomright() {
     return (
         <div>
             <div className='bottom-right'>
-                <div className='todo'>
-                    <p onClick={()=> setShowList(prev=> !prev)}>TODO</p>
+                <div onClick={()=> setShowList(prev=> !prev)} className='todo'>
+                    <p>TODO</p>
                 </div>
             </div>
 

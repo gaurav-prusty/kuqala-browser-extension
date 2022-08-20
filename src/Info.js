@@ -5,7 +5,11 @@ import Content from './Content';
 import Topleft from './Topleft';
 import Topright from './Topright';
 
+
+
+
 function Info() {
+
     return (
         <div className='info'>
             <Topleft />
