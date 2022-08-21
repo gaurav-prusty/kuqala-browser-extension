@@ -1,11 +1,7 @@
-import React, { useContext } from 'react';
-import {useNavigate} from "react-router-dom"
-import { LoginContext } from './LoginContext';
+import React from 'react';
+
 
 function Bottomleft() {
-    let {isLoggedIn, setIsLoggedIn} = useContext(LoginContext);
-
-    const navigate = useNavigate();
 
     //navigate to home page
     function goHome() {

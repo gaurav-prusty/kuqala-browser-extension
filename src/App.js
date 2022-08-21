@@ -1,6 +1,6 @@
 import './App.css';
 import Info from './Info';
-import {Routes, Route, Navigate} from "react-router-dom";
+import {Routes, Route} from "react-router-dom";
 import Home from './Home';
 import React, { useEffect, useState } from 'react';
 import { ListContext } from './ListContext';
@@ -31,3 +31,5 @@ function App() {
 )}
 
 export default App;
+
+

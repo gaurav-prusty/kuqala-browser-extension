@@ -1,13 +1,8 @@
-import React, {useContext, useState} from 'react';
-import {useNavigate} from "react-router-dom";
-import { LoginContext } from './LoginContext';
+import React, {useState} from 'react';
 
 
 function Home() {
-    let [userName, setUserName] = useState();                   //store username entered by user
-    let {setIsLoggedIn} = useContext(LoginContext);                 
-
-    const navigate = useNavigate();
+    let [userName, setUserName] = useState();                   //store username entered by use            
 
     function goInfo() {
         localStorage.setItem("userName", userName);
