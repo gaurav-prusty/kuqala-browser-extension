@@ -2,7 +2,7 @@ import './App.css';
 import Info from './Info';
 import {Routes, Route, Navigate} from "react-router-dom";
 import Home from './Home';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ListContext } from './ListContext';
 import { LoginContext } from './LoginContext';
 
@@ -12,13 +12,18 @@ function App() {
   let [items, setItems] = useState([]);
   let [isLoggedIn, setIsLoggedIn] = useState(false);
 
+
+  useEffect(()=> {
+    const user = localStorage.getItem('userName');
+    setIsLoggedIn(user);
+  }, [isLoggedIn])
+
   return (
     <div className='App'>
       <LoginContext.Provider value={{isLoggedIn, setIsLoggedIn}}>
       <ListContext.Provider value={{items, setItems}}>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/info" element={isLoggedIn ? <Info /> : <Navigate to='/' replace={true} />} />
+          <Route path="/" element={isLoggedIn ? <Info /> : <Home />} />
         </Routes>
       </ListContext.Provider>
       </LoginContext.Provider>

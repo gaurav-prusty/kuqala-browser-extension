@@ -10,9 +10,8 @@ function Home() {
     const navigate = useNavigate();
 
     function goInfo() {
-        navigate("/info");
-        window.localStorage.setItem("userName", userName);
-        setIsLoggedIn(true);
+        localStorage.setItem("userName", userName);
+        window.location.reload(false);
     }
 
     return (

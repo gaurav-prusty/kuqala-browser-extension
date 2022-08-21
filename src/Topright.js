@@ -33,7 +33,7 @@ function Topright() {
         lon = pos.coords.longitude;
 
         weatherUrl = `https://api.openweathermap.org/data/2.5/weather?units=metric&lat=${lat}&lon=${lon}&appid=${apiID}`;
-        cityNameUrl = `http://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&appid=${apiID}`;
+        cityNameUrl = `https://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&appid=${apiID}`;
 
         //weather data fetch from API
         axios.get(weatherUrl)
@@ -45,7 +45,8 @@ function Topright() {
         axios.get(cityNameUrl)
             .then(res=> {
                 setCityName(res.data[0].name + ", " + res.data[0].country);
-            })
+                console.log('city recieved');
+            });
      }
 
     return (  
