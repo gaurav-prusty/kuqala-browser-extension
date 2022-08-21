@@ -490,6 +490,7 @@ a {
 }
 
 .list-item {
+  cursor: default;
   width: auto;
   height: auto;
   word-wrap: break-word;
@@ -527,7 +528,7 @@ a {
 }
 
 .add-btn {
-  
+  cursor: default;
   position: relative;
   left: 1.2rem;
   padding: 0.3rem 0.4rem;
